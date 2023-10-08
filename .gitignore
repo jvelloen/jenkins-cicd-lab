@@ -1,0 +1,5 @@
+jenkins_home
+jenkins_home/*
+.token
+jenkins_agent
+jenkins_agent.pub
