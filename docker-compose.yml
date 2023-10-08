@@ -2,7 +2,10 @@
 version: '3.8'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    # image: jenkins/jenkins:lts
+    build:
+      dockerfile: Dockerfile
+      context: .
     privileged: true
     user: root
     ports:
@@ -20,4 +23,4 @@ services:
     expose:
       - 22
     environment:
-      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzf96zifcq32k5lQDhU+G6va7ES4r9z0rROIOp9Tl9tl0Uepcnb0MvQZMUPLjRVicI07TRchD69KuQYhLIQyA/Qd2DpuJN5EOJgqdYM102KOvB+mfWcL15XMSRgYGvgebt0USEKnNokto/XTXUb554JubgRpKusljnq60wx49ErL1ZZxwsEbcbpOP4xh3tcpcrHj7IPjwZywQ9geRC+XD7VVXzt6ACECRl8EQ1rfV1cqU8v63P0iYxcXp4OxopbgGmkIEWMfCgWhGVDJGcvb1DAK3xGXR1F6ngWMmFJe9e4B4Q3dUQtiv8ARu+rop4vbCtWVwD4jBtBCmm2PP1rhl9NgHEQbch/NzAVLRAbcMvpA02WvzL58KaorXvf+qQjwhDpjAJ5V7JQqN1tHcz5hiTn7uqq3uUBxoSiRT7zVt+1lueEFxQUvPXqMbw+brPbuW//NRcO1ia1fdDxeInUQtDvOg8TPvxiFBv6oiuXzCDuFIbcIaD9VO3B1QUVSp0ZGM= jvelloen@NZJVELLOEN01
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCbYg78D0s33PRFbEgZ6uan/jwhCimuzfY5QQkmrKtPXQUXfYRhSLdOzMY7jcR/TGGh0GJzB4In90Mja1prhmaX0KbFE3/eLnkqA9dsuqodlmFe/VnyV7YJVbKWD04GPRzdRn5WMr3RskrTRyIffKXXEuriDGMuaH/laNuH6G8KsNrjYYw3y2zHJYllVZ4NHpy8aN5hqtiIigjMkG8gZX91tSghQXnCXZ3V1tUmW02YpITm3ClBJk8dzu/0ZIjUYNnCXFqxm6s7xpKPgNMBV2x3TtwSTL0qJbHU3pTu4H5WMX1t3JKqWQLF2Zc0aXyAFuFQxHVuOIfdoOAfoB6nxq5rvQA2lVoAqTzEIuvWvkYDmJr7qev3xUFS/vdX9F7jDjv48etyoFGFkj1Rtp1aW+9Vp0Go+HePVGiBr+khr4YYlNq+PDlVDMHoa+nA6Gq9O8I1+UKAqB2H7l+3NPCFR2vq75QayhpVgGFGVMpggkmr1pTV/l3eoAoQVCGFgSXR3L0= jvelloen@NZJVELLOEN01
